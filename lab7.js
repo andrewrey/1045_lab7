@@ -27,7 +27,7 @@ const raiseError = (num) => {
   if (num === 1) {
     errorParagraph.textContent = `Error, you must enter at both a "Job Title" and "Where you're located". Please reset and try again!`;
   } else {
-    errorParagraph.textContent = `Error, you must enter you Doggie's AGE. Please reset and try again!`;
+    errorParagraph.textContent = `Error, you must enter your Doggie's AGE. Please reset and try again!`;
   }
   errorDiv.appendChild(errorParagraph);
   errorDiv.className = "error";
@@ -68,7 +68,7 @@ const fortuneTeller = (jobTitle, loc, partnerName, numChild) => {
   if (!error) {
     testTwo.innerHTML = `<p>${output}</p>`;
   } else {
-    raiseError();
+    raiseError(1);
   }
 };
 
