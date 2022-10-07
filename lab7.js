@@ -1,4 +1,5 @@
-const testTwo = document.querySelector("#div2");
+const futureText = document.querySelector("#div2");
+const doggyText = document.querySelector("#div3");
 const fortuneButton = document.querySelector("#fortune");
 const dogAgeButton = document.querySelector("#dogAge");
 let output;
@@ -66,24 +67,15 @@ const fortuneTeller = (jobTitle, loc, partnerName, numChild) => {
   }
 
   if (!error) {
-    testTwo.innerHTML = `<p>${output}</p>`;
+    futureText.innerHTML = `<p>${output}</p>`;
   } else {
     raiseError(1);
   }
 };
 
-////////////////////////////
-/// Prompts to get input ///
-////////////////////////////
-
-let jobTitle = prompt("What is your Job Title: ");
-let userLocation = prompt("Where are you located: ");
-let partnerName = prompt(`What is your Partner's name: `);
-let numChild = prompt("How many children do you have: ");
-let puppyAge = prompt(`How old is your dog: `);
-let ageFactor = prompt(
-  "What is the age factor to be applied: (must be a number) "
-);
+/////////////////////////////////////////
+///////// Doggy age Function ////////////
+/////////////////////////////////////////
 
 const calculateDogAge = (age, factor) => {
   let output;
@@ -91,11 +83,11 @@ const calculateDogAge = (age, factor) => {
   if (nullOrEmptyString(age)) {
     factor = nullOrEmptyString(factor) ? parseInt(factor) : 7;
     output = `Your doggie is ${parseInt(age) * factor}`;
+    doggyText.innerHTML = `<p>${output}</p>`;
+    console.log(output);
   } else {
     raiseError();
   }
-
-  console.log(output);
 };
 
 ////////////////////////////

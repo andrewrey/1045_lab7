@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="utf-8">
+  <head lang="en">
+    <meta charset="utf-8" />
     <title>Exercises for Lab 6</title>
     <link rel="stylesheet" type="text/css" href="css/my_stylesheet.css" />
-    <script src="lab7.js" defer></script>
-</head>
-<body>
-<header>
-  <h1>Lab 07 – Writing Javascript Functions with Optional Arguments</h1>
-</header>
+    <script>
+      ////////////////////////////
+      /// Prompts to get input ///
+      ////////////////////////////
 
-<div class='movingDiv' id='div1'>
-    Part 1: Fortune Teller 
-    <div id="div2">
-        Your predicted future will be shown here
+      let jobTitle = prompt("What is your Job Title: ");
+      let userLocation = prompt("Where are you located: ");
+      let partnerName = prompt(`What is your Partner's name: `);
+      let numChild = prompt("How many children do you have: ");
+      let puppyAge = prompt(`How old is your dog: `);
+      let ageFactor = prompt(
+        "What is the age factor to be applied: (must be a number) "
+      );
+    </script>
+    <script src="lab7.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Lab 07 – Writing Javascript Functions with Optional Arguments</h1>
+    </header>
+
+    <div class="movingDiv" id="div1">
+      Part 1: Fortune Teller
+      <div id="div2">Your predicted future will be shown here</div>
+      <button id="fortune">Click here and I will predict your future</button>
+      <br />Part 2: Dog Age Finder
+      <div id="div3">Your Dog's age will be shown here</div>
+      <button id="dogAge">Click here and I will tell your Dog's age</button>
     </div>
-    <button id="fortune">Click here and I will predict your future</button>
-    <br>Part 2: Dog Age Finder
-    <div id="div3">
-        Your Dog's age will be shown here
-    </div>
-    <button id="dogAge">Click here and I will tell your Dog's age</button>
-</div>
-<footer>
-  <p><em>Copyright Khurram Shehzad &copy; 2022</em></p>
-</footer>
-</body>
+    <footer>
+      <p><em>Copyright Khurram Shehzad &copy; 2022</em></p>
+    </footer>
+  </body>
 </html>
