@@ -1,18 +1,47 @@
+.movingDiv {
+  border: solid 1px black;
+  position: relative;
+  margin: 30px 5px;
+  padding: 20px 5px;
+  width: 80%;
 
-.movingDiv{
-border: solid 1px black;
-position:relative;
-margin:30px 5px;
-padding:20px 5px;
-width:80%;
-
-line-height:60px;
+  line-height: 60px;
 }
 
-fieldset{
-border: solid 1px #777777;
+fieldset {
+  border: solid 1px #777777;
 }
 
-.required{
-background-color:#EEEE55;
+.required {
+  background-color: #eeee55;
+}
+
+.error {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 500px;
+  height: 300px;
+  color: red;
+  background-color: black;
+  margin-left: -250px;
+  margin-top: -150px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.cover {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
