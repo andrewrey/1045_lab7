@@ -4,8 +4,15 @@ const dogAgeButton = document.querySelector("#dogAge");
 let output;
 let error = false;
 
+const nullOrEmptyString = (inputVariable) => {
+  if (inputVariable === null) {
+    return 0;
+  } else {
+    return inputVariable.trim();
+  }
+};
 const fortuneTeller = (jobTitle, loc, partnerName, numChild) => {
-  if (jobTitle.trim().length && loc.trim().length) {
+  if (nullOrEmptyString(jobTitle) && nullOrEmptyString(jobTitle)) {
     if (partnerName.trim().length && numChild.trim().length) {
       console.log(
         `You will be a ${jobTitle} in ${loc}, and married to ${partnerName} with ${numChild} kids.`
@@ -23,6 +30,7 @@ const fortuneTeller = (jobTitle, loc, partnerName, numChild) => {
       output = `You will be a ${jobTitle} in ${loc} and not married to anyone.`;
     }
   } else {
+    console.log("test");
     error = true;
   }
 };
@@ -31,8 +39,6 @@ let jobTitle = prompt("What is your Job Title: ");
 let userLocation = prompt("Where are you located: ");
 let partnerName = prompt(`What is your Partner's name: `);
 let numChild = prompt("How many children do you have: ");
-
-console.log(typeof jobTitle);
 
 fortuneButton.addEventListener(
   "click",
@@ -53,7 +59,6 @@ if (!error) {
   document.querySelector("body").appendChild(errorDiv);
   document.querySelector("body").appendChild(cover);
   document.querySelector(".cover").addEventListener("click", () => {
-    console.log("test");
     location.reload();
   });
 }
